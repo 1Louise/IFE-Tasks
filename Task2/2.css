@@ -1,0 +1,9 @@
+strong {color: red;}  /*优先级：
+                               类选择器 .carrot 和.spinach 比标签选择器 strong 拥有更高优先级
+                               但id优于class、标签是指的同时选择的同一element的情况，例如
+                               <strong id="third">M</strong>，这时css写了 strong{ red}   #third {blue}，则会以id那个为准
+                               */
+
+.carrot {color: orange;}
+.spinach {color: green;}
+#first {font-style: italic;}

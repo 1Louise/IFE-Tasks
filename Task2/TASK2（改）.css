@@ -1,0 +1,152 @@
+/*header*/
+header {
+	background-color:#333;
+	height: 80px;
+}
+
+header > img {
+	text-align: left;
+}
+
+header a {
+	color: white;
+}
+
+header ul {
+	float: right;
+}
+
+header li {
+	float: left;
+	padding: 15px;
+	list-style:none;  /*去掉无序表前面的点*/
+}
+
+/*body*/
+body {
+	/* @m body默认有margin,需要去掉，得占满整个宽度*/
+	margin: 0;
+	background-color:#ddd;
+}
+
+article h3 {
+	color: #555;
+}
+
+article > h3+p {
+	color: gray;
+}
+
+article {
+	background-color: white;
+	margin: 40px;
+	padding:20px;
+}
+
+article div{
+	/* @m 文本图像居中*/
+	text-align: center;
+	border:3px solid gray;
+	margin: 10px;
+	padding: 10px;
+	width: 120px;
+}
+
+/* @m p段落 使用line-height使行之间有间隔（行间距）*/
+article > p {
+	line-height: 1.5em;
+}
+
+/*table*/
+#demo-table > thead > tr > th {
+	background-color: #333;
+	font-weight: bold;
+	color: white;
+	/* @m 一般不使用padding-right来控制table里列的宽度*/
+	/*padding-right: 350px;*/
+	/*换为text-align:left;*/
+}
+
+/* @m 原图中table要求占满100% */
+#demo-table {
+	width: 100%;
+}
+
+#demo-table > tfoot > tr td {
+	background-color: #ddd;
+}
+
+#demo-table > tfoot >tr > td+td {
+	font-weight: bold;
+}
+
+#demo-table {
+	border-collapse: collapse;
+	border: 2px solid #ddd;
+}
+
+#demo-table > tbody > tr td {
+	border-left: 2px solid #ddd;
+	border-bottom: 2px solid #ddd;
+}
+
+/*aside*/
+
+aside {
+	background-color: white;
+	margin: 40px;
+	padding: 20px;
+}
+
+aside > h2:first-child {
+	border-left: 3px solid gray;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+}
+
+aside form label > div, aside form label > input {
+	display: inline-block;
+}
+
+/*form*/
+form > div {
+	margin: 10px;
+	padding-left: 12em;
+}
+
+.tip {
+	color: gray;
+	font-size: 15px;
+	padding-left: 12.5em;
+}
+
+.text {
+	width: 10em;
+	padding-left: 20px;
+	text-align: right;
+	vertical-align: top;
+}
+
+aside .button {
+	width: 100%;
+	background: #128fdc;
+	color: white;
+	padding: 10px 0 10px 0;
+	border-radius: 10px;
+	border:none;
+	height: 40px;
+}
+
+/*footer*/
+footer {
+	background-color: #000;
+	height: 80px;
+	padding-top:.5em;
+}
+
+footer p {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}

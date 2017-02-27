@@ -1,0 +1,7 @@
+div.menu-bar ul ul {      /*ul中嵌套ul*/
+  display: none;
+}
+
+div.menu-bar li:hover > ul {  /*此元素将显示为块级元素，此元素前后会带有换行符。*/
+  display: block;
+}

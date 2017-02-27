@@ -1,0 +1,9 @@
+body { background: url("../picture/line.png"); }   /*./是当前目录，../上级目录*/
+            									   /*背景图默认是 repeat（重复）的，无需明确指出。*/
+p {color: blue; font-style: italic; font-weight: bold;}
+
+.first {color: red; font: 200% serif;}
+.second {color: lime; font: 200% serif;}
+.third {color: red;font:200% serif;}
+
+p::before {content: url("../picture/ball.png");}

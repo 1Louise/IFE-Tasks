@@ -1,0 +1,27 @@
+ol.info {
+	list-style: upper-roman;
+    border: 8px solid lightblue;
+}
+
+body {counter-reset: headnum;}
+h3::before {
+	content: "("counter(headnum, upper-latin)")";
+	counter-increment: headnum;
+}
+
+h3.numbered {counter-reset: mynum;}
+p.numbered::before {
+	content: counter(mynum) ":";
+	counter-increment: mynum;
+	font-weight: bold;
+}
+
+h3 {border-top: 2px solid gray;
+	border-left: 4em solid yellow;  /*em是相对于文本的，相对于字体大小；px是写死的。
+	                   				  用em，若字体变大，用em单位的border也会相应变粗。*/
+	border-right: 4px solid red;
+
+}
+li {
+	margin-bottom: 8px;
+}

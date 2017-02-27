@@ -1,0 +1,5 @@
+body { background-color: #ffffc9 }
+a:link { color: blue } /* 未访问链接 */
+a:visited { color: purple } /* 已访问链接 */
+a:hover { font-weight: bold; color: red} /* 用户鼠标悬停 */
+a:active { color: lime } /* 激活链接 */
