@@ -1,0 +1,33 @@
+
+.box-set {
+	background-color: #ccc;
+	width: 400px;
+	height: 200px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin-top: -100px;
+	margin-left: -200px;
+}
+
+.left {
+	background-color: #fc0;
+	width: 50px;
+	height: 50px;
+	border-radius: 0 0 50px 0;
+
+	position: absolute;
+}
+
+.right {
+	background-color: #fc0;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px 0 0 0;
+
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
