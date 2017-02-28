@@ -1,0 +1,166 @@
+/*header*/
+header {
+	background-color:#333;
+	height: 80px;
+	width: 100%;
+}
+
+header > img {
+	text-align: left;
+}
+
+header a {
+	color: white;
+}
+
+header ul {
+	float: right;
+}
+
+header li {
+	float: left;
+	padding: 15px;
+	list-style:none;  /*去掉无序表前面的点*/
+}
+
+/*aside*/
+
+aside {
+	background-color: white;
+	margin: 20px 20px 0 20px;
+	padding: 20px;
+	overflow: auto;
+
+	float: right;
+}
+
+aside > h3:first-child {
+	border-left: 3px solid gray;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+}
+
+aside form label > div, aside form label > input {
+	display: inline-block;
+}
+
+/*body*/
+body {
+	margin: 0;
+	background-color:#ddd;
+}
+
+article h3 {
+	color: #555;
+}
+
+article > h3+p {
+	color: gray;
+}
+
+.a1 {
+	background-color: white;
+	margin: 20px 530px 20px 20px;
+	padding:20px;
+	overflow: auto;
+}
+
+.a2 {
+	background-color: white;
+	margin: 20px 530px 20px 20px;
+	padding:20px;
+	overflow: auto;
+}
+
+.pic {
+	width: 100px;
+	height: 100px;
+}
+
+.box {
+	float: left;
+}
+
+article div{
+	text-align: center;
+	border:3px solid gray;
+	margin: 10px;
+	padding: 10px;
+}
+
+article p {
+	line-height: 1.5em;
+}
+
+/*table*/
+#demo-table {
+	width: 100%;
+}
+
+#demo-table > thead > tr > th {
+	background-color: #333;
+	font-weight: bold;
+	color: white;
+	text-align: left;
+}
+
+#demo-table > tfoot > tr td {
+	background-color: #ddd;
+}
+
+#demo-table > tfoot >tr > td+td {
+	font-weight: bold;
+}
+
+#demo-table {
+	border-collapse: collapse;
+	border: 2px solid #ddd;
+}
+
+#demo-table > tbody > tr td {
+	border-left: 2px solid #ddd;
+	border-bottom: 2px solid #ddd;
+}
+
+/*form*/
+form > div {
+	margin: 10px;
+}
+
+.tip {
+	color: gray;
+	font-size: 15px;
+	padding-left: 12.5em;
+}
+
+.text {
+	width: 10em;
+	padding-left: 20px;
+	text-align: right;
+	vertical-align: top;
+}
+
+aside .button {
+	width: 100%;
+	background: #128fdc;
+	color: white;
+	padding: 10px 0 10px 0;
+	border-radius: 10px;
+	border:none;
+	height: 40px;
+}
+
+/*footer*/
+footer {
+	background-color: #000;
+	height: 80px;
+	padding-top:.5em;
+	width: 100%;
+}
+
+footer p {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
