@@ -49,6 +49,7 @@ aside form label > div, aside form label > input {
 body {
 	margin: 0;
 	background-color:#ddd;
+	min-width: 880px;  /*在极端情况下导航文字的显示*/
 }
 
 article h3 {
@@ -149,6 +150,7 @@ aside .button {
 	border-radius: 10px;
 	border:none;
 	height: 40px;
+	width: 450px;  /*固定宽度*/
 }
 
 /*footer*/
