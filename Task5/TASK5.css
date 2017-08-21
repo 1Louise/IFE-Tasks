@@ -14,6 +14,7 @@ header a {
 }
 
 header ul {
+	margin: 10px;  /*ul自带margin，需设定，否则会把aside位置挤掉*/
 	float: right;
 }
 

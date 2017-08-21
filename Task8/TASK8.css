@@ -1,0 +1,73 @@
+.container {
+	width: 100%;
+}
+
+.row {
+	overflow: hidden;
+}
+
+ /*或者：
+.row:after {
+    content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}*/
+
+div[class*='col-'] {
+	float: left;
+	box-sizing: border-box;    /* 通常一个块级元素实际所占 宽/高度=外边距（margin）+ 边界宽度(border-width) + 内边距（padding）+ 高度（height） /  宽度（width）
+                                  如果设置了border-box，实际所占 宽/高度 = 设置的高度（height）/ 设置的宽度（width）+ 外边距（margin）*/
+	border: 1px #999 solid;
+	background-color: #eee;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin: 10px;
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+	width: calc(33.33% - 20px);
+}
+
+    .col-md-3 {
+	width: calc(25% - 20px);
+}
+
+    .col-md-6 {
+	width: calc(50% - 20px);
+}
+
+    .col-md-1 {
+	width: calc(8.33% - 20px);
+}
+
+    .col-md-2 {
+	width: calc(16.66% - 20px);
+}
+}
+
+@media (max-width: 767px) {
+	.col-sm-6 {
+		width: calc(50% - 20px);
+	}
+
+	.col-sm-12 {
+		width: calc(100% - 20px);
+	}
+
+	.col-sm-3 {
+		width: calc(25% - 20px);
+	}
+
+	.col-sm-2 {
+		width: calc(16.66% - 20px);
+	}
+
+	.col-sm-8 {
+		width: calc(66.66% - 20px);
+	}
+}
+

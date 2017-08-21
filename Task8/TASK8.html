@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TASK 8</title>
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="TASK8.css"></head>
+
+<body>      <!-- 记得在float元素的父级元素清除浮动，使用overflow:hidden或者用：after clear
+                这样看着父元素才是真正包裹住了他的子元素的，否则看body，其实没有包住任何element-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">1</div>
+            <div class="col-md-4 col-sm-6">2</div>
+            <div class="col-md-4 col-sm-12">3</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-3">4</div>
+            <div class="col-md-6 col-sm-6">5</div>
+            <div class="col-md-3 col-sm-3">6</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1 col-sm-2">7</div>
+            <div class="col-md-1 col-sm-2">8</div>
+            <div class="col-md-2 col-sm-8">9</div>
+            <div class="col-md-2 col-sm-3">10</div>
+            <div class="col-md-6 col-sm-3">11</div>
+        </div>
+    </div>
+</body>
+
+</html>

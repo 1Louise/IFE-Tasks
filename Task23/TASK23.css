@@ -1,0 +1,50 @@
+#treeroot {
+	display: flex;
+	padding: 20px;
+	border:1px solid black;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	flex-direction: column;
+}
+
+.child1{
+	display: flex;
+	padding:20px;
+	border:1px solid black;
+	margin-bottom: 20px;
+	justify-content: space-between;
+}
+
+.child2{
+	display: flex;
+	padding: 20px;
+	border:1px solid black;
+	margin-bottom: 20px;
+	justify-content: space-between;
+}
+
+.child3{
+	display: flex;
+	padding: 20px;
+	border:1px solid black;
+	justify-content: space-between;
+}
+
+.child4{
+	display: flex;
+	padding: 20px;
+	border:1px solid black;
+}
+
+#deep,#wide{
+	width: 120px;
+	height: 60px;
+}
+
+#deep{
+	margin-left: 20%;
+}
+
+#wide{
+	margin-right: 10%;
+}

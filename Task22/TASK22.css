@@ -1,0 +1,43 @@
+#treeroot {
+	display: flex;
+	padding: 20px;
+	border:1px solid black;
+	height: 400px;
+	width: 1000px;
+	margin-left: 15%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	justify-content: space-between;
+}
+
+.child1{
+	display: flex;
+	padding:20px;
+	border:1px solid red;
+	width: 440px;
+	justify-content: space-between;
+}
+
+.child2{
+	display: flex;
+	padding: 20px;
+	border:1px solid blue;
+	width: 160px;
+	justify-content: space-between;
+}
+
+.child3{
+	display: flex;
+	padding: 20px;
+	border:1px solid orange;
+	width: 25px;
+}
+
+#opre,#oin,#opost{
+	width: 150px;
+	height: 80px;
+}
+
+#opre{
+	margin-left: 30%;
+}

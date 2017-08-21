@@ -246,6 +246,7 @@ body {
 	font-style: oblique;
 	margin-top: 600px;
 	margin-bottom: 0;
+	margin-right: 10px;  /*@m 加个margin-right就更像原图了 */
 }
 
 .topic-2 {

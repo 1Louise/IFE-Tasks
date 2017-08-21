@@ -1,0 +1,40 @@
+#treeroot {
+	display: flex;
+	padding: 20px;
+	border:1px solid black;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	flex-direction: column;
+}
+
+.child1,.child2{
+	display: flex;
+	padding:20px;
+	border:1px solid black;
+	margin-bottom: 20px;
+	justify-content: space-between;
+}
+
+.child3,.child4,.added{
+	display: flex;
+	padding:20px;
+	border:1px solid black;
+	justify-content: space-between;
+}
+
+#deep,#wide{
+	width: 120px;
+	height: 60px;
+}
+
+#deep{
+	margin-left: 15%;
+}
+
+#wide{
+	margin-right: 30px;
+}
+
+#budelete{
+	margin-left: 30px;
+}

@@ -1,0 +1,20 @@
+.display{
+	background-color: yellow;
+	cursor: pointer;
+	width: 80px;
+	height: 80px;
+	float: left;
+	padding-top: 10px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.input-text{
+	margin-bottom: 20px;
+}
+
+#text-a{
+	clear: left;
+}

@@ -1,0 +1,153 @@
+/*Table*/
+table {
+	border-collapse: separate;
+}
+
+table thead th {
+	color: white;
+	text-align: left;
+}
+
+table thead {
+	background-color: black;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: grey;
+}
+
+table tbody tr:nth-child(-n+3) td {    /*n必须在前面*/
+	color: red;
+}
+
+/*Inputform*/
+.inputform {
+	margin: 20px 10px;
+	width: 80px;
+}
+
+.inputform:focus {
+	width: 190px;
+	transition: width 0.3s ease-in-out;
+}
+
+/*Banner*/
+.banner {
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+	background-color: red;
+
+	position: relative;
+}
+
+.sliders {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: red;   /*可变换颜色看效果帮助理解*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: .5s slide-init linear;
+}
+
+.banner ul {
+	list-style: none;
+}
+
+.banner a {
+	text-decoration: none;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: white;
+	margin: 0;
+	line-height: 40px;
+	text-align: center;
+}
+
+.sliders li {
+	width: 100%;
+	height: 100%;
+	animation: 0.5s slide-out linear;
+
+	position: absolute;
+	top: 0;
+	left: -100%;
+}
+
+.sliders li:target {
+	left:0%;
+	animation: 0.5s slide-in linear;
+}
+
+#slide-1 {
+	background-color: red;
+}
+
+#slide-2 {
+	background-color: yellow;
+}
+
+#slide-3 {
+	background-color: blue;   /*3相对于sliders滑动*/
+}
+
+.char {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+a:nth-child(1) {   /*规定属于其父元素的第二个子元素的每个 a 的背景色*/
+	position: absolute;
+	bottom: 0;
+	right: 100px;
+}
+
+a:nth-child(2) {
+	position: absolute;
+	bottom: 0;
+	right: 50px;
+}
+
+a:nth-child(3) {
+	position: absolute;
+	bottom: 0;
+	right: 0px;
+}
+
+@keyframes slide-in {
+	0% {
+		left: 100%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+
+@keyframes slide-out {   /*在0的基础往左100*/
+	0% {
+		left: 0%;
+	}
+	100% {
+		left: -100%;
+	}
+}
+
+@keyframes slide-init {
+	0% {
+		left: -100%;
+	}
+
+	100% {
+		left: 0;
+	}
+}

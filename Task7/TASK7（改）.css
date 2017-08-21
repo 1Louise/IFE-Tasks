@@ -1,0 +1,815 @@
+
+/*不能太依赖绝对定位。因为绝对定位往往是在你当前屏幕尺寸上看着对的，但一换了个屏幕 定位的位置就不对了
+另外还有class的命名，尽量少用 1 2 3 4这种数字来标记，尽量给他有意义的命名*/
+
+body {
+	min-width: 1280px;
+	height: 4554px;
+	margin: 0;
+}
+
+/*导航栏*/
+.nav {
+	 height: 57px;
+	 padding: 0 20px;
+}
+
+.nav-head {
+	font-size: 21px;
+	font-family: SimHei;
+	height: 57px;
+	line-height: 57px;
+	display: inline-block;   /*设置inline-block使图片和字在一行，并可以设置高度*/
+	                         /*block是成块儿的 默认占满整行的，可以设置高度宽度等*/
+	                         /*inline则是行内元素，就是在一行之内，可以排多个的inline元素，像span这种，inline默认不能更改高度宽度等*/
+	                         /*而inline-block就结合了这两者,可以让多个inline-block块在同一行,同时又能设置他们的高度边距等
+	                         对于inline只能设置水平方向的左右边距那些，垂直方向的上下边距也是不能设置的
+	                         而inline-block其实起到了浮动那种布局的作用，让多个块级元素处在同一行*/
+}
+
+.nav-left {
+	margin-left: 50px;
+	float: left;
+}
+
+.nav ul {
+	float: right;
+	margin: 0;
+}
+
+.nav ul li {
+	float: left;
+	display: list-item;
+	/*padding: 0 15px;*/ /* @m 配合对li下链接.nav-word的修改 */
+	margin: 0;
+	list-style: none;
+	height: 54px;
+	line-height: 57px;
+}
+
+.nav-word {
+	font-family: Microsoft YaHei;
+	font-size: 14px;
+	/* @m 为了使可被点击的范围增大，而不仅是文字的区域，使nav-word display:inline-block;并增加padding（不能是margin） */
+	display: inline-block;
+	height: 54px;
+	padding: 0 15px;
+
+	color: #b5b7bb;
+	text-decoration: none;
+}
+
+.nav-enroll {
+	font-family: Microsoft YaHei;
+	font-size: 14px;
+	/* @m 同nav-word， 可将这些公共样式都写在ul li a里*/
+	display: inline-block;
+	height: 54px;
+	color: #e74f4d;
+	text-decoration: none;
+}
+
+.nav-enroll:hover {
+	/*color: #5f4de7;*/
+}
+
+.nav-li:hover {
+	border-bottom: 3px #e74f4d solid;
+}
+
+.nav-word:hover {
+	color: #e74f4d;
+}
+
+.part1-pic1 {
+	vertical-align: middle;  /*img默认为inline元素*/
+	margin-bottom: 10px;
+}
+
+.part1-pic2 {
+	vertical-align: middle;;
+}
+
+/*Part 1*/
+.part1 {
+	position: relative;
+}
+
+.part1-pic3 {
+	width: 100%;
+	/* @m 固定定height， 不然会随浏览器宽度，高度成比例增加，超出pic14-attach的高度
+	固定了height,width为100%则会随浏览器宽度水平拉伸图片，可能会造成图片一定程度的变形
+	*/
+	height: 727.9px;
+}
+
+.pic14-attach {
+	width: 100%;
+	height: 727.9px;
+	background-color: #000000;
+	opacity: 0.3;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+
+.part1-head {
+	font-size: 60px;
+	font-family: Microsoft YaHei;
+	color: #ffffff;
+	margin: 0;
+
+	position: absolute;
+	left: 116px;
+	top: 229px;
+}
+
+.part1-text {
+	font-size: 21px;
+	font-family: Microsoft YaHei;
+	color: #ffffff;
+	margin: 0;
+}
+
+.part1-text1 {
+	position: absolute;
+	left: 117px;
+	top: 309px;
+}
+
+.part1-text2 {
+	position: absolute;
+	left: 117px;
+	top: 340px;
+}
+
+
+.click {
+	/* @m 定位与设计稿有一点偏差, 另配合下面click-text修改，这里不设置宽高 padding*/
+	/* 原 width: 329px;
+	height: 40px;  总共为65px，height不包括padding*/
+	background-color: #e74f4d;
+	margin: 0;
+	/*padding: 12.5px;*/
+
+	position: absolute;
+	top: 426px;
+	left: 124px;
+}
+
+
+.click-text {
+	font-family: Microsoft YaHei;
+	font-size: 30px;
+	/*@m 同上面，此处为链接，要使整块区域都可点击，而不是只是文本那一小块儿*/
+	display: inline-block;
+	width: 354px;
+	height: 65px;
+	line-height: 65px;
+	text-align: center;
+
+	color: #ffffff;
+	text-decoration: none;
+	/*margin: 0 104.5px;  a是行内元素，不能设置垂直只能设置水平*/
+}
+
+/*Part 2 */
+.part2 {
+	min-width: 1280px;
+	height: 250px;
+}
+
+.part2-1 {
+	/*@m 为自适应宽度，宽度可都设为25%*/
+	/* 原 width: 320px;
+	margin: 0;*/
+	width:25%;
+	height: 250px;
+	display: inline-block;
+}
+
+.part2-text {
+	/*@m 按照设计稿，文字居中*/
+	margin: 0;
+	font-size: 14px;
+	font-family: SimHei;
+	border-left: 2px #8d8d8d solid;
+	height: 50px;
+	/*原 padding-left: 100px;
+	width: 170px;*/
+	width: 50%;
+	padding: 0 25%;
+	text-align: center;
+}
+
+.part2-pic {
+	/*@m 使用margin:0 auto的方法居中, 另外这几张图片，在切图的时候最好切为等宽等高的*/
+	/*margin: 45px 0 30px 150px;*/
+	display: block;
+	margin:54px auto 48px;
+
+}
+
+/*Part 3*/
+.part3 {
+	height: 360px;
+	background-color: #edecec;
+}
+
+.part3-pic {
+	/* @m 同上面图片居中方式 */
+	/*margin-top: 89px;
+	margin-left: 595px;*/
+	display: block;
+	margin:0 auto 45px; /* 在设置为block后，此处需要使用padding-top而不是margin-top
+	margin-top 会影响其父级元素，使父级元素margin-top增加，而自身相对父级元素的未变化*/
+	padding-top: 54px;
+}
+
+.part3-text {
+	font-family: SimHei;
+	font-size: 54px;
+	color: #a1a1a1;
+	height: 54px;
+	/*@m 直接居中*/
+	/*margin-left: 215px;*/
+	text-align: center;
+}
+
+/*Part 4*/
+.part4 {
+	width: 100%;
+	height: 340px;
+	position: relative;
+	/*@m 将html中的img标签删去，改为background*/
+	background: url('./images/17.png') no-repeat;
+	background-size: 100% auto;
+}
+
+.part4-pic {
+	width: 100%;
+}
+
+.part4-title {
+	font-size: 21px;
+	font-family: Microsoft YaHei;
+	color: #ffffff;
+	margin: 0 0 5px 0;
+}
+
+
+.part4-1 {
+	/* @m 绝对定位也有其居中方式，居中一般不通过写具体的值来实现，
+	否则浏览器宽度一变，绝对定位的元素可能就不是居中的了*/
+	text-align: center;
+	/*position: absolute;
+	top: 52px;
+	left: 440px;*/
+
+	padding: 52px 0 50px; /*此处使用padding而不是margin的原因同.part3-pic */
+}
+
+.part4-line {
+	border-bottom: 2px #ffffff solid;
+	width: 30px;
+	margin: 0 0 15px 0;
+	display: inline-block;
+}
+
+.part4-line:hover {
+	width: 260px;
+	transition: width 0.4s ease-in-out;
+}
+
+.part4-text {
+	font-family: Microsoft YaHei;
+	font-size: 12px;
+	color: #ffffff;
+	margin: 0;
+}
+
+/*@m 将4个input放一个div中进行定位并居中*/
+.part4-inputs {
+	width:1060px;
+	height: 36px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.part4-input {
+	width: 222px;
+	height: 30px;
+	margin: 0;
+	padding-left: 10px;
+	background-image: url(./images/20.png);
+	/*@m 此处background-image多截了一块阴影(所引用的图片有阴影),使用position隐去*/
+	background-position: -2px;
+
+	cursor: pointer;
+	/*@m 单独使用border-top这些效果上会出现三角*/
+	/*border-top: 2px #be4e48 solid;
+	border-left: 2px #be4e48 solid;
+	border-right: 2px #be4e48 solid;*/
+	border:2px #ffffff solid;
+	border-bottom: 0;
+}
+
+/*@m 点击时才变红 */
+ .part4-input:focus {
+	border: 2px #be4e48 solid;
+	border-bottom: 0;
+} 
+
+.part4-input:focus ~.part4-list{
+	display: block;
+}
+
+.part4-a {
+	margin: 0;
+	padding-left: 10px;
+}
+
+.part4-2 {
+	position: absolute;
+	/*@m 重新修改定位，整体位置由part4-inputs定位，不再单独设定每个input的top*/
+	/*top: 170px;
+	left: 124px;*/
+}
+
+.part4-3 {
+	position: absolute;
+	/*top: 170px;
+	left: 400px;*/
+	left: 266px;
+}
+
+.part4-4 {
+	position: absolute;
+	/*top: 170px;
+	left: 670px;*/
+	left: 530px;
+}
+
+.part4-list {
+	margin: 0;
+	list-style: none;
+	z-index: 10;
+
+	position: absolute;
+	/*@m 有偏差错位,同时应在点击时才显示，加上display:none;*/
+	/*left: -31px;*/
+	left: -30px;
+	display: none;
+}
+
+.part4-3 ul li {
+	/*@m 原宽度有1px偏差，看着会有错位*/
+	/*width: 183px;*/
+	width: 182px;
+	color: #787878;
+	margin: 0;
+	background-color: #e3e3e3;
+	padding: 10px 0 10px 50px;
+	border-left: 2px #be4e48 solid;
+	border-right: 2px #be4e48 solid;
+}
+
+.part4-3 li:nth-of-type(6) {
+	border-bottom: 2px #be4e48 solid;
+}
+
+.part4-3 ul li:hover {
+	color: #ffffff;
+	background-color: #be4e48;
+	background-image: url(./images/21.png);
+	background-repeat: no-repeat;
+}
+
+.part4-5 {
+	width: 236px;
+	height: 36px;
+	margin: 0;
+	background-color: #be4e48;
+
+	position: absolute;
+	/*top: 170px;
+	right: 130px;*/
+	right: 0;
+}
+
+.part4-5-text {
+	color: #ffffff;
+	font-size: 14px;
+	font-family: Microsoft YaHei;
+	margin: 0;
+	letter-spacing: 25px;
+	text-align: center;
+	height: 36px;
+	line-height: 36px;
+}
+
+.part5-4-click {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+/*Part 5*/
+.part5 {	
+	background-color: #f7f7f7;
+	height: 600px;
+	position: relative;
+}
+
+/* @m 同上增加一层div,并居中， 下面part5-1 part5-2等部分定位为粗略定位
+	本身此处4块儿应该为同一个class，设定同样的宽度
+*/
+.part5-content {
+	width: 1000px;
+	position: relative;
+	margin:100px auto 0;
+}
+
+.part5-1 {
+	position: absolute;
+	/*top: 100px;
+	left: 160px;*/
+}
+
+.part5-2 {
+	position: absolute;
+	/*top: 100px;
+	left: 420px;*/
+	left: 250px;
+}
+
+.part5-3 {
+	margin: 0;
+
+	position: absolute;
+	/*top: 100px;
+	right: 450px;*/
+	left: 500px;
+}
+
+.part5-4 {
+	position: absolute;
+	/*top: 100px;
+	right: 180px;*/
+	right: 0;
+}
+
+.part5-head1 {
+	font-size: 16px;
+	color: #959595;
+	text-align: center;
+	margin: 0;
+}
+
+.part5-head2 {
+	font-size: 20px;
+	text-align: center;
+	margin: 0;
+	letter-spacing: 40px;
+}
+
+.part5-text {
+	font-size: 12px;
+	color: #bdbdbd;
+	text-align: center;
+	margin: 5px;
+}
+
+/*Part 6*/
+.part6-1 {
+	height: 596.5px;
+	margin: 0;
+
+	position: relative;
+}
+
+.part6-2 {
+	height: 548.03px;
+	margin: 0;
+}
+
+.part6-pic {
+	width: 100%;
+}
+
+.part6-text {
+	font-family: Microsoft YaHei;
+	color: #ffffff;
+	margin: 0;
+}
+
+.p6-1 {
+	font-size: 49.5px;
+	
+}
+
+.p6-2 {
+	font-size: 157.8px;
+}
+
+.p6-3 {
+	font-size: 21.9px;
+}
+
+.part6-text1 {
+	text-align: center;
+
+	position: absolute;
+	top: 132px;
+	left: 241px;
+}
+
+.part6-text2 {
+	margin: 0;
+	text-align: center;
+
+	position: absolute;
+	top: 165px;
+	right: 67px;
+}
+
+.p6-t2-1 {
+	margin: 0;
+	font-size: 20px;
+	color: #323333;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.p6-t2-2 {
+	font-weight: bold;
+	margin: 0;
+	font-size: 20px;
+	color: #e74f4d;
+}
+
+.p6-t2-3 {
+	font-size: 12px;
+	color: #dadada;
+	width: 290px;
+	text-align: left;
+	line-height: 30px;
+}
+
+.p6-t2-4 {
+	font-size: 12px;
+	margin: 0;
+	border: 2px #eea9ab solid;
+	padding: 10px  30px;
+	display: inline-block;
+	color: #eea9ab;
+}
+
+.part6-2 {
+	position: relative;
+}
+
+.part6-text3 {
+	margin: 0;
+	text-align: center;
+
+	position: absolute;
+	top: 138px;
+	left: 126px;
+}
+
+.part6-text4 {
+	margin: 0;
+	text-align: center;
+
+	position: absolute;
+	top: 138px;
+	left: 580px;
+}
+
+.p6-t3 {
+	font-size: 21.9px;
+	font-family: Microsoft YaHei;
+	margin: 0;
+	line-height: 30px;
+}
+
+.p6-link {
+	text-decoration: none;
+	color: #eea9ab;
+}
+
+.p6-link2 {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.p6-t3-1 {
+	color: #ffffff;
+}
+
+.p6-t3-2 {
+	color: #ffffff;
+	border: 1px #ffffff solid;
+	padding: 10px 30px;
+}
+
+.p6-line1 {
+	border-bottom: 2px #ffffff solid;
+	width: 30px;
+	display: inline-block;
+	margin: 20px 0;
+}
+
+.p6-t3-3 {
+	color: #eea9ab;
+	border: 1px #eea9ab solid;
+	padding: 10px 30px;
+}
+
+.p6-line2 {
+	border-bottom: 2px #abaaaa solid;
+	width: 30px;
+	display: inline-block;
+	margin: 20px 0;
+}
+
+/*Part 7*/
+.part7 {
+	padding: 118px 125px;
+}
+
+.part7-1 {
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+.p7-t1-1 {
+	margin: 0;
+	font-size: 21px;
+	font-family: SimHei;
+}
+
+.p7-line {
+	border-bottom: 2px #e74f4d solid;
+	width: 30px;
+	margin: 10px 0;
+	display: inline-block;
+}
+
+.p7-line:hover {
+	width: 260px;
+	transition: width 0.4s ease-in-out;
+}
+
+.p7-t1-2 {
+	color: #b0b0b0;
+	margin: 0;
+	font-size: 12px;
+	font-family: Microsoft YaHei;
+}
+
+.part7-2 {
+	width: 288px;
+	margin: 0 75px 0 0;
+	float: left;
+}
+
+.p7-h {
+	font-size: 14px;
+	font-family: SimSun;
+	font-weight: bold;
+	margin: 0 0 26px 0;
+}
+
+.p7-t {
+	font-size: 12px;
+	font-family: SimSun;
+	margin: 0;
+	line-height: 20px;
+	color: #b0b0b0;
+}
+
+.p7-more {
+	color: #b0b0b0;
+	font-size: 12px;
+	margin: 0 0 40px 0;
+	text-align: right;
+}
+
+.p7-input {
+	margin: 0 17px 15px 0;
+	background-color: #ededee;
+	border-style: none;
+	padding-left: 20px;
+}
+
+.p7-input1 {
+	width: 290px;
+	height: 50px;
+}
+
+.p7-input2 {
+	margin: 0 17px 15px 0;
+	background-color: #ededee;
+	border-style: none;
+	width: 617px;
+	height: 140px;
+	font-size: 12px;
+	font-family: SimSun;
+	padding: 10px 0 0 20px;
+}
+
+.p7-input3 {
+	width: 637px;
+	height: 40px;
+	cursor: pointer;
+}
+
+/*Part 8*/
+.part8 {
+	background-color: #32353e;
+	padding: 90px 380px 70px 380px;
+	text-align: center;
+}
+
+.p8-h {
+	font-size: 21px;
+	font-family: SimHei;
+	margin: 0;
+	color: #ffffff;
+}
+
+.p8-t {
+	font-size: 12px;
+	font-family: SimSun;
+	color: #ffffff;
+	margin: 10px 0;
+}
+
+.p8-pic {
+	margin: 0 25px 0 0;
+}
+
+.p8-input {
+	margin: 30px 0 36px 0;
+
+	position: relative;
+}
+
+.p8-email {
+	width: 450px;
+	height: 38px;
+	font-size: 12px;
+	margin: 0;
+	border-style: none;
+	padding-left: 10px;
+}
+
+.p8-submit {
+	width: 70px;
+	height: 40px;
+	margin: 0;
+	font-size: 12px;
+	background-color: #6f7278;
+	border-style: none;
+	color: #ffffff;
+	letter-spacing: 10px;
+	cursor: pointer;
+
+	position: absolute;
+	top: 0;
+}
+
+/*Part 9*/
+.part9 {
+	width: 100%;
+	height: 60px;
+	background-color: #303039;
+
+	position: relative;
+}
+
+.p9-t1 {
+	color: #d5d5d5;
+	font-size: 12px;
+	font-family: SimSun;
+	margin: 0;
+
+	position: absolute;
+	top: 30px;
+	left: 100px;
+}
+
+.p9-t2 {
+	color: #d5d5d5;
+	font-size: 12px;
+	font-family: SimSun;
+	text-decoration: none;
+	margin: 0;
+
+	position: absolute;
+	top: 30px;
+	right: 40px;
+}
